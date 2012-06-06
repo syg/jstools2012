@@ -1,21 +1,24 @@
-/**
- * Main styles for reveal.js 
- *
- * @author Hakim El Hattab
- */
-
-
-/*********************************************
- * FONT-FACE DEFINITIONS
- *********************************************/
-
 @font-face {
-	font-family: 'League Gothic';
-	src: url('../assets/fonts/leaguegothic/league_gothic-webfont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Crimson';
+    src: url('../assets/fonts/crimson-roman.eot');
+    src: url('../assets/fonts/crimson-roman.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/crimson-roman.woff') format('woff'),
+         url('../assets/fonts/crimson-roman.ttf') format('truetype'),
+         url('../assets/fonts/crimson-roman.svg#CrimsonRoman') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: 'Crimson';
+    src: url('../assets/fonts/crimson-italic.eot');
+    src: url('../assets/fonts/crimson-italic.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/crimson-italic.woff') format('woff'),
+         url('../assets/fonts/crimson-italic.ttf') format('truetype'),
+         url('../assets/fonts/crimson-italic.svg#CrimsonItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
 
 /*********************************************
  * GLOBAL STYLES
@@ -35,38 +38,116 @@ body {
 	margin: 0;
 	overflow: hidden;
 	
-	font-family: 'Lato', Times, 'Times New Roman', serif;
+	font-family: 'Crimson', Times, 'Times New Roman', serif;
 	font-size: 36px;
 	font-weight: 200;
 	letter-spacing: -0.02em;
-	color: #eee;
+	color: #444;
 
-	background: #1c1e20;
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM1NTVhNWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMWMxZTIwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-	background: -moz-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%, rgba(28,30,32,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(85,90,95,1)), color-stop(100%,rgba(28,30,32,1)));
-	background: -webkit-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
-	background: radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
+	background: #ece8e8;
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(236,232,232,1) 0%, rgba(213,195,192,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(236,232,232,1)), color-stop(100%,rgba(213,195,192,1)));
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(236,232,232,1) 0%,rgba(213,195,192,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover,  rgba(236,232,232,1) 0%,rgba(213,195,192,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(236,232,232,1) 0%,rgba(213,195,192,1) 100%);
+	background: radial-gradient(center, ellipse cover,  rgba(236,232,232,1) 0%,rgba(213,195,192,1) 100%);
 }
 
 /*********************************************
  * HEADERS
  *********************************************/
+
+.stitle {
+    font-family: "Open Sans Condensed";
+    text-transform: uppercase;
+    position: relative;
+    color: #eee;
+    font-size: 56px;
+    font-weight: bold;
+}
+
+#whatthe {
+    left: 30px;
+    top: 10px;
+}
+
+#needsnow {
+    left: 30px;
+    bottom: -10px;
+}
+
+#web {
+    font-family: "Permanent Marker";
+    font-style: italic;
+    color: #ff5e99;
+    font-size: 200px;
+}
+
+#W {
+    position: relative;
+    top: 15px;
+    font-size: 250px;
+}
+
+#title-info {
+    font-family: "Open Sans Condensed";
+    position: relative;
+    color: #eee;
+    position: relative;
+    font-size: 42px;
+    left: 15px;
+    top: 50px;
+}
+
+#title-info span + span {
+    margin-left: 80px;
+}
+
+.reveal div.doing-good-logo {
+    position: relative;
+    top: 150px;
+    left: -50px;
+    /*left: -330px;*/
+    font-family: 'MetaBold-Roman';
+    font-size: 200%;
+}
+
+.reveal div.doing-good-logo img {
+    float: left;
+}
+
+.reveal div.doing-good-logo div {
+    position: relative;
+    top: 100px;
+    color: white;
+}
+
+.reveal div.doing-good-logo div span {
+    color: black;
+}
+
+.reveal h1.doing-good {
+    position: relative;
+    top: 100px;
+    font-family: 'MetaBold-Roman';
+    font-size: 300%;
+    color: white;
+    line-height: 1.2em;
+}
+
 .reveal h1, 
 .reveal h2, 
 .reveal h3, 
 .reveal h4 {
 	margin: 0 0 20px 0;
 	
-	color: #eee;
+	color: #333;
 	
-	font-family: 'League Gothic', sans-serif;
+	font-family: 'Lato', sans-serif;
+        font-weight: bold;
 	line-height: 0.9em;
 	letter-spacing: 0.02em;
-	
-	text-transform: uppercase;
+
 	text-shadow: 0px 0px 6px rgba(0,0,0,0.2);
 }
 
@@ -81,20 +162,6 @@ body {
 .reveal h4.inverted {
 	color: #fff;
 	text-shadow: 0px 0px 2px rgba(0,0,0,0.2);
-}
-
-.reveal h1 {
-	text-shadow: 0 1px 0 #ccc,
-                 0 2px 0 #c9c9c9,
-                 0 3px 0 #bbb,
-                 0 4px 0 #b9b9b9,
-                 0 5px 0 #aaa,
-                 0 6px 1px rgba(0,0,0,.1),
-                 0 0 5px rgba(0,0,0,.1),
-                 0 1px 3px rgba(0,0,0,.3),
-                 0 3px 5px rgba(0,0,0,.2),
-                 0 5px 10px rgba(0,0,0,.25),
-                 0 20px 20px rgba(0,0,0,.15);
 }
 
 
@@ -926,11 +993,11 @@ body {
 	height: 100%;
 	background: rgba( 0, 0, 0, 0 );
 
-	-webkit-transition: background 800ms ease;
-	   -moz-transition: background 800ms ease;
-	    -ms-transition: background 800ms ease;
-	     -o-transition: background 800ms ease;
-	        transition: background 800ms ease;
+	-webkit-transition: background 400ms ease;
+	   -moz-transition: background 400ms ease;
+	    -ms-transition: background 400ms ease;
+	     -o-transition: background 400ms ease;
+	        transition: background 400ms ease;
 }
 .alert .state-background {
 	background: rgba( 200, 50, 30, 0.6 );
@@ -939,9 +1006,20 @@ body {
 	background: rgba( 50, 200, 90, 0.4 );
 }
 .blackout .state-background {
-	background: rgba( 0, 0, 0, 0.6 );
+	background: #2d2d2d;
 }
 
+.orange .state-background {
+    background: #f1622f;
+}
 
-
-
+.reveal img.transparent {
+    margin: 0;
+    background: none;
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+}
