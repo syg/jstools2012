@@ -43,13 +43,246 @@
         <section data-state="orange">
           <h1 class="doing-good">Doing good is part of our code.</h1>
           <div class="doing-good-logo">
-            <img class=transparent src=assets/images/firefox-logo.png width=411 height=411>
+            <img class="transparent" src="assets/images/firefox-logo.png" width="411" height="411">
             <div>mozilla<span>.org</span></div>
           </div>
         </section>
 
         <section>
-          <h2>What the Web Has Now</h2>
+          <section>
+            <h2>Inspectors</h2>
+            <img class="transparent" src="assets/images/inspector.png">
+          </section>
+
+          <section>
+            <h2>Step Debugger</h2>
+            <img class="transparent" src="assets/images/debugger.png">
+          </section>
+
+          <section>
+            <h2>Beautifier</h2>
+            <img class="transparent" src="assets/images/beautifier-before.png">
+            <img class="transparent fragment" style="position: absolute; z-index: 100; left: 102px; top: 123px;" src="assets/images/beautifier-after.png">
+          </section>
+        </section>
+
+        <section>
+          <h2>State of the Art</h2>
+          <p style="margin-top: 100px;">Chrome has the best tools.</p>
+          <p>Firefox is behind but quickly catching up.</p>
+          <br><br>
+          <p class="fragment">That's nice. But don't we live in the future now?</p>
+        </section>
+
+        <section>
+          <h2>Tools the Future Needs</h2>
+          <ul class="big-and-important">
+            <li class="fragment">Integrated</li>
+            <li class="fragment">Transparent</li>
+            <li class="fragment">Visualized</li>
+          </ul>
+        </section>
+
+        <section>
+          <section>
+            <h2>Integrated</h2>
+            <ul style="margin-top: 100px;">
+              <li>..into the browser
+                <ul>
+                  <li>Chrome can edit DOM in tree</li>
+                  <li>FF's Scratchpad and Debugger API</li>
+                </ul>
+              </li>
+              <li class="fragment">
+                ..into the JS programming experience.
+                <ul>
+                  <li>Flapjax</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Use the Browser, Luke</h2>
+            <ul style="margin-top: 100px;">
+              <li>Addons less scary than going into the guts</li>
+              <li>We got FFI: ctypes</li>
+              <li>We got a debugger API</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Integrated</h2>
+            <p style="margin-top: 100px;">...into the web environment</p>
+            <p>The web is more than JS!</p>
+            <blockquote style="margin-top: 50px;">
+              CSS is weird and hard-to-understand.
+            </blockquote>
+          </section>
+
+          <section>
+            <h2>Integrated</h2>
+            <p>...into the web environment, which is <i>dynamic</i></p>
+            <img src="assets/images/eval-is-evil-shirt.jpg">
+          </section>
+
+          <section>
+            <h2><code>eval</code>... seems legit?</h2>
+            <ul style="margin-top: 100px;">
+              <li>JITs</li>
+              <!-- This lets us do things that *weren't* possible with C. I can actually step into JITed code. -->
+              <li>Partial evaluation</li>
+              <li>Optimization. (Crazy, I know.)</li>
+            </ul>
+            <p style="margin-top: 80px;"><code>eval</code> is a legitimate tool in web developers' toolbox.</p>
+          </section>
+
+          <section>
+            <h2>Static Analysis</h2>
+            <p style="margin-top: 100px;">Traditional static analyses have been a poor fit. Why?</p>
+            <ul>
+              <li>Precision and soundness</li>
+              <li>Poor integration with runtime info</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Transparent</h2>
+            <p style="margin-top: 40px; margin-bottom: 20px;">JIT performance is unpredictable</p>
+            <pre><code style="font-size: small; line-height: 1.2em">...
+#1:00039:   6  getgname "C"
+  typeset 1: object[1] <0x102110980>
+  type 0: object[1] <0x102110980>
+#1:00044:   6  undefined
+  type 0: void
+#1:00045:   6  new 0
+  typeset 2: object[1] [0x102100220]
+  type 0: object[1] [0x102100220]
+#1:00048:   6  setgname "c"
+  type 0: object[1] [0x102100220]
+#1:00053:   6  pop
+#1:00054:   5  gnameinc "i"
+#1:00060:   5  bindgname "i"
+  type 0: missing
+#1:00065:   5  getgname "i"
+  typeset 3: int
+  type 0: int
+  barrier: void
+#1:00070:   5  pos
+  type 0: int
+#1:00071:   5  dup
+...</code></pre>
+            <!-- Demo JIT inspector here -->
+          </section>
+
+          <section>
+            <h2>Programming Model</h2>
+            <p>Dynamic + Higher-Order + Async</p>
+            <img src="assets/images/hold-bugs.png" height="500">
+          </section>
+
+          <section>
+            <h2>Programming Model</h2>
+            <ul style="margin-top: 100px;">
+              <li>Better way to debug asynchronous code?</li>
+              <li>How do we even surface more info?</li>
+              <li>Can analyses help?</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Visualized</h2>
+            <ul style="margin-top: 100px;">
+              <li>Better feedback loop with developer</li>
+              <li class="fragment">Performance and profiling tools</li>
+              <li class="fragment">Augment analyses</li>
+              <li class="fragment">Compress wealth of information</li>
+              <li class="fragment">Bang for your buck</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Visualizing Code Info</h2>
+            <ul style="margin-top: 100px;">
+              <li>Frequencies (performance, static)</li>
+              <li class="fragment">Runtime information</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Visualizing Time</h2>
+            <img class="transparent" src="assets/images/chrome-timeline.png">
+          </section>
+
+          <section>
+            <h2>Code Mapping</h2>
+            <pre style="margin-top: 40px;"><code>numbers = [1,2,3,4,5,6]
+evens = n for n in numbers when m % 2 is 0</code></pre>
+            <pre style="margin-top: 40px;" class="fragment"><code>$ bin/coffee test.coffee 
+ReferenceError: m is not defined
+    at Object.&lt;anonymous&gt; (/Users/shu/cs/test.coffee:8:9)
+    at Object.&lt;anonymous&gt; (/Users/shu/cs/test.coffee:13:4)
+    at Module._compile (module.js:446:26)
+    at Object.run (/Users/shu/cs/lib/coffee-script.js:88:25)
+    at /Users/shu/cs/lib/command.js:183:29
+    at /Users/shu/cs/lib/command.js:152:18
+    ...</code></pre>
+
+            <h3 class="fragment">Not helpful!</h3>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Let's Dream Bigger</h2>
+            <img src="assets/images/library-of-babel.jpg">
+          </section>
+
+          <section>
+            <h2>Corpora</h2>
+            <h4>Open & Queryable</h4>
+            <div class="fragment">
+              <p style="margin-top: 50px;">...of JavaScript</p>
+              <ul>
+                <li>Crawlable</li>
+                <li>Very, very valuable for all</li>
+              </ul>
+            </div>
+            <div class="fragment">
+              <p style="margin-top: 50px;">...of profiled information</p>
+              <ul>
+                <li>GC</li>
+                <li>Energy</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Research Browser</h2>
+            <ul style="margin-top: 100px;">
+              <li>Can it be in JS?</li>
+              <!-- This'll provide a standard large program for JS engine implementers. You get a browser for free. -->
+              <li>Also very valuable for all</li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section>
+          <h2>Take Home</h2>
+          <img src="assets/images/everywhere.jpg">
+        </section>
+
+	<section data-state="blackout">
+          <h1 id="web" style="font-size: 148px;">Thanks!</h1>
+
+          <div id="title-info">
+            <span>Brainstorming aided by Dave Herman and Michael Bebenita</span>
+          </div>
         </section>
 
       </div>
@@ -78,16 +311,6 @@
       var query = {};
       location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
         query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
-      } );
-
-      // Fires when a slide with data-state=customevent is activated
-      Reveal.addEventListener( 'customevent', function() {
-        alert( '"customevent" has fired' );
-      } );
-
-      // Fires each time a new slide is activated
-      Reveal.addEventListener( 'slidechanged', function( event ) {
-        // event.indexh & event.indexv
       } );
 
       Reveal.initialize({
