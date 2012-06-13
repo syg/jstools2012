@@ -86,14 +86,14 @@
           <section>
             <h2>Integrated</h2>
             <ul style="margin-top: 100px;">
-              <li>..into the browser
+              <li>...into the browser
                 <ul>
                   <li>Chrome can edit DOM in tree</li>
                   <li>FF's Scratchpad</li>
                 </ul>
               </li>
               <li class="fragment">
-                ..into the JS programming experience.
+                ...into the JS programming experience.
                 <ul>
                   <li>Flapjax</li>
                   <li>FF's debugger API</li>
@@ -111,10 +111,11 @@
             <h2>Use the Browser, Luke</h2>
             <ul style="margin-top: 100px;">
               <li>Addons less scary than going into the guts</li>
-              <li>We got FFI: ctypes</li>
-              <li>We got a debugger API</li>
+              <li>FFI: ctypes</li>
+              <li>Debugger API</li>
             </ul>
           </section>
+          <!-- Use the browser to build tools. -->
 
           <section>
             <h2>Integrated</h2>
@@ -226,7 +227,7 @@
           <section>
             <h2>Code Mapping</h2>
             <pre style="margin-top: 40px;"><code>numbers = [1,2,3,4,5,6]
-evens = n for n in numbers when m % 2 is 0</code></pre>
+evens = n for n in numbers when <span style="background: yellow; color: #333; border-radius: 3px; padding: 4px;">m</span> % 2 is 0</code></pre>
             <pre style="margin-top: 40px;" class="fragment"><code>$ bin/coffee test.coffee 
 ReferenceError: m is not defined
     at Object.&lt;anonymous&gt; (/Users/shu/cs/test.coffee:8:9)
@@ -270,7 +271,6 @@ ReferenceError: m is not defined
             <h2>Research Browser</h2>
             <ul style="margin-top: 100px;">
               <li>Can it be in JS?</li>
-              <!-- This'll provide a standard large program for JS engine implementers. You get a browser for free. -->
               <li>Also very valuable for all</li>
             </ul>
           </section>
